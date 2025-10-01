@@ -54,6 +54,7 @@ namespace csen79 {
 			rankBits >>= 1;
 		return rankBits == 0x1F;
 	}
+
 	// You are to implement these
 	bool Poker::isFlush(uint s[]) {
 		for (auto i = 0u; i <= Card::Suit::CLUB; ++i)

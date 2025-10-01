@@ -26,16 +26,7 @@ namespace csen79 {
 		static const std::string RankNames[POKER_ARRAY_SIZE];
 
 
-/*
-Single deck Poker hands are categorized into the following “ranks” in descending order (higher
-one “wins” lower): Straight Flush, Four of a Kind, Full House, Flush, Straight, Three of a Kind,
-Two Pairs, Pair, and High Card.
-5. Complete the member function “rankHand” that categorizes the dealt hand into one of
-the ranking categories. This func/on uses helpers to test if a hand is in the ranked
-category. Replace the stud implementa/on for 5 “isXXX” func/ons from line 59 to 63.
-6. Finish functions PokerHands and PokerStats in pokermain.cxx.
-7. PokerHands prints one “sample” hand for each rank category.
-*/
+
 		Poker();
 		void dealHand();
 		Rank rankHand();
