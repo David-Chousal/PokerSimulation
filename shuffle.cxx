@@ -1,6 +1,7 @@
 /*
- * Name: Your Name
- * Email: Your email
+ * David Chousal
+ * dchousal@scu.edu
+ * CSEN 79 Lab: Poker Statistics
  */
 #include <cstdlib>
 #include <ctime>

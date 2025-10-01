@@ -1,4 +1,5 @@
 /*
+ * David Chousal
  * CSEN 79 Lab: Poker Statistics
  */
 #ifndef CARD_H
