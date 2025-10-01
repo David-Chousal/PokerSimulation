@@ -46,20 +46,20 @@ void pokerStats(Poker &poker) { // collect statistics for each rank of Poker
 
 	double seconds = static_cast<double>(tmark) / CLOCKS_PER_SEC;
     double secondsPer50k = seconds * 50000.0 / static_cast<double>(NUM_TRIALS);
+	cout << "Dealt " << NUM_TRIALS << " hands" << ", time elapsed: " << seconds << " s" << endl;
+	cout << fixed << setprecision(6) << "Average time per 50k hands: " << secondsPer50k << " s " << endl << endl;
 
 	cout << left << setw(18) << "Rank" << right << setw(12) << "Count" << setw(12) << "%" << endl;
 	cout << setfill('-') << setw(42) << "" << setfill(' ') << endl;
-	for (int r = 0; r < Poker::POKER_ARRAY_SIZE; ++r) {
-		double pct = 100.0 * static_cast<double>(counts[r]) / static_cast<double>(NUM_TRIALS);
+	for (int r = 0; r < Poker::POKER_ARRAY_SIZE; ++r) { // Lowest Rank --> Highest Rank
+	// for (int r = Poker::POKER_STRAIGHT_FLUSH; r >= Poker::POKER_HIGHCARD; --r) { // Highest Rank --> Lowest Rank
+		double percent = 100.0 * static_cast<double>(counts[r]) / static_cast<double>(NUM_TRIALS);
 		cout << left << setw(18) << Poker::RankNames[r]
 		     << right << setw(12) << counts[r]
-		     << setw(11) << fixed << setprecision(2) << pct << "%" << endl;
+		     << setw(11) << fixed << setprecision(2) << percent << "%" << endl;
 	}
 	cout.unsetf(ios::fixed);
 	cout << endl;
-	cout << "Dealt " << NUM_TRIALS << " hands" << ", time elapsed: " << seconds << " s" << endl;
-    cout << fixed << setprecision(6) << "Average time per 50k hands: " << secondsPer50k << " s" << endl;
-	cout.unsetf(ios::fixed);
 }
 
 int main(void) {
