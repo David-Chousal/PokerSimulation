@@ -22,7 +22,7 @@ namespace csen79 {
 				cards[i++] = Card(s, r);
 		}
 
-		// for shuffling.
+		// for shuffling. Change to a constant for debugging
 		srand(time(0));
 	}
 	// print 13 cards each row

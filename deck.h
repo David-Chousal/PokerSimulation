@@ -25,7 +25,7 @@ namespace csen79 {
         const Card &deal(void);
         void shuffle(void);
 
-        friend std::ostream& operator<<(std::ostream& os, const Deck &);
+    friend std::ostream& operator<<(std::ostream& os, const Deck &);
 
     private:
         int nCards;	// number of cards across all decks (currently 52)

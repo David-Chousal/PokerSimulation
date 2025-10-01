@@ -79,6 +79,7 @@ namespace csen79 {
 			}
 		return false;
 	}
+	
 	bool Poker::countRank(uint r[], int n) {
 		for (auto i = 0; i < Card::NRANKS; i++)
 			if (r[i] == n)
