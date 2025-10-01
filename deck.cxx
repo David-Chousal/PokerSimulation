@@ -22,10 +22,9 @@ namespace csen79 {
 				cards[i++] = Card(s, r);
 		}
 
-		// for shuffling.  Change to a constant for debugging
+		// for shuffling.
 		srand(time(0));
 	}
-
 	// print 13 cards each row
 	ostream& operator<<(ostream& os, const Deck &d) {
 		int i = 0;
